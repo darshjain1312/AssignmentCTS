@@ -1,0 +1,74 @@
+Before Refactor
+-----------------
+
+		public class Course{
+			public String courseId;  
+			public String courseTitle;
+			private String courseInstructor;
+			
+			public Course(){
+				
+			}
+			
+			getCourseInstructor(){return courseInstructor;}
+			
+			static int noOfInstructors;
+			
+		}
+
+
+		
+For encapsulation we need to change the access specifiers of variables to private.
+And generate their respective getters and setters to access.
+
+And for refactoring we need to remove the NoArgs Constructor and give the proper 
+method signature.
+
+Code after encapsulation and refactoring
+------------------------------------------
+
+		public class Course{
+			private String courseId;
+			private String courseTitle;
+			private String courseInstructor;
+			private static int noOfInstructors;
+			
+			public String getCourseId(){
+				return courseId;
+			}
+			
+			public void setCourseId(String courseId){
+				this.courseId = courseId;
+			}
+			
+			public String getCourseTitle(){
+				return courseTitle;
+			}
+			
+			public void setCourseTitle(String courseTitle){
+				this.courseTitle = courseTitle;
+			}
+			
+			public String getCourseInstructor(){
+				return courseInstructor;
+			}
+			
+			public void setCourseInstructor(String courseInstructor){
+				this.courseInstructor = courseInstructor;
+			}
+			
+			public static int getNoOfInstructors(){
+				return noOfInstructors;
+			}
+			
+			public static void setNoOfInstructors(int noOfInstructor){
+				noOfInstructors = noOfInstructor;
+			}
+			
+			public String getCourseInstructor(){
+				return courseInstructor;
+			}
+			
+			
+			
+		}

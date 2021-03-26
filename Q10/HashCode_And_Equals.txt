@@ -1,0 +1,9 @@
+The hashCode() method ->
+	In Java, the hash code value of an object is returned by calling the hashCode() method, on that object. This method is implemented, by default, in the Object class and is, therefore, inherited by user-defined classes as well.
+
+	When hashCode() is called on two separate objects (which are equal according to the equals() method) it returns the same hash code value. However, if it is called on two unequal objects, it will not necessarily return different integer values.
+
+The equals() method ->
+	To compare two objects the object class provides a method with name equals(), this method accepts an object and compares it with the current object. If the references of these two objects are equal, then it returns true else this method returns false.
+
+	The equals() method of the String class is not same as the equals() method of the Object class. It is overridden, this method accepts a String value and compares it with the current object and returns true only if the character sequences in the both String objects are exactly same.
